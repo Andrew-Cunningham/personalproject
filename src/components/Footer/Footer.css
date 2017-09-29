@@ -1,0 +1,49 @@
+.App4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 15vh;
+    
+    background: #00c2fd;
+}
+.LoginButton2{
+    
+    grid-column: 3/4;
+    grid-row: 1/1;
+    border-color: #00c2fd;
+    background: #00c2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+button2 {
+    
+    /* width: 175px;
+    height: 40px;*/
+    border-radius: 10px; 
+    border-color: #00c2fd;
+    background: #00c2fd;
+    font-size: 4vw;
+    font-family: 'Overlock', cursive;
+
+    
+}
+  
+button2:focus {
+    outline: none;
+}
+.Title2{
+    grid-column: 2/3;
+    grid-row: 1/1;
+    /* justify-content: center;
+    align-items: center; */
+    color: #000000;
+    font-size: 4vw;
+    font-family: 'Overlock', cursive;
+    background-color:#00c2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
