@@ -11,6 +11,7 @@ export default class Login extends Component{
             <div className='App3'>
                 
                 <div className='LoginSidebar1'>
+                
                     
                 </div>
                 <div className='LoginSidebar2'>
