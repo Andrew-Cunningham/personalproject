@@ -31,19 +31,30 @@ class Home extends Component{
         ).then((response)=>{
         alert('A chore was submitted: ' + this.state.value);
         this.setState({value:""});})
+        this.props.getChores()
         }
+    
+     
     componentDidMount(){
             this.props.getChores();
     }
     completeChore(id){
         
-        axios.put('/chores/progress/' + id)
+        axios.put('/chores/progress/' + id).then((response)=>{
+            this.props.getChores()
+        })
 
         
         }    
+        
     
 
       render(){
+
+        axios.get('/user/all').then(function(response){
+            console.log('your user info is: ',response.data); // ex.: { user: 'Your User'}
+            console.log(response.status); // ex.: 200
+          });
         
         const chores=this.props.chores.map((chore) => {
             console.log(chore)
@@ -64,15 +75,18 @@ class Home extends Component{
                 {CompChores.name}
             </button>
         )}
-        }) 
+        })
+        
+         
+        
         return(
             <div className='App2'>
                 
-                <div className='HomeSidebar1'><div>Sidebar 1</div></div>
-                <div className='HomeSidebar2'><div>Sidebar 2</div></div>
+                <div className='HomeSidebar1'><div></div></div>
+                <div className='HomeSidebar2'><div></div></div>
                 <div className='HomeChoreHeader'>
                     <div className='HomeChoreHeaderinner'>
-                    <div>HOMEPAGE</div></div>
+                    </div>
                     <div className="CompletedChores">
                         
                         <p>Completed Chores: {CompChores}</p>
@@ -92,6 +106,7 @@ class Home extends Component{
                 </div>
             </div>
         )
+        
     }
 }
 function mapStateToProps( state ) {

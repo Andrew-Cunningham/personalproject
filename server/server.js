@@ -6,6 +6,11 @@ const express=require('express'),
         passport= require('passport'),
         Auth0Strategy= require('passport-auth0'),
         cors=require('cors');
+        keyPublishable = process.env.PUBLISHABLE_KEY;
+        keySecret = process.env.SECRET_KEY;
+        stripe=require('stripe')(keySecret);
+        
+
 
 const app= express();
 app.use(session({
@@ -102,8 +107,8 @@ app.get('/chores/name', (req, res)=>{
     // console.log('req.chores', req.chores);
     // console.log('session', req.session);
     
-    
-    dbInstance.get_chores().then(function(response){
+   
+    dbInstance.get_chores(req.user.id).then(function(response){
         res.send(response)
     })
 })
@@ -113,7 +118,41 @@ app.put('/chores/progress/:id', (req, res)=>{
         res.send(response)
     })
 })
+app.get('/user/all', (req, res)=>{
+    // const dbInstance = req.app.get('db');
+    
+    // dbInstance.get_user(req.user.auth_id).then(function(response){
+    //     res.send(response)
+    //     console.log(response);
+    //     console.log('user id is ', req.user.id);
+    // })
+    res.send(req.user)
+})
 
+
+
+
+app.use(require("body-parser").urlencoded({extended: false}));
+
+
+
+
+app.post("/charge", (req, res) => {
+    let amount = 500;
+  
+    stripe.customers.create({
+       email: req.body.stripeEmail,
+      source: req.body.stripeToken.id
+    })
+    .then(customer =>
+      stripe.charges.create({
+        amount,
+        description: "Sample Charge",
+           currency: "usd",
+           customer: customer.id
+      }))
+    .then(charge => res.render("charge.pug"));
+  });
 
 
 

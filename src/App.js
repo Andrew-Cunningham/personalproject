@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
         <Navbar/>
           <HashRouter>
           <Switch>

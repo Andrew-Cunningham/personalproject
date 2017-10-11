@@ -1,50 +1,179 @@
-.App1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    /* grid-gap: 1px; */
-    height:15vh;
-    background-color: #00c2fd;
+@media screen and (max-width:499px){
+    /* for small devices */
+    .App1 {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr;
+        /* grid-gap: 1px; */
+        height:15vh;
+        background-color: #1e1e1e;
+        width:auto;
+    
+    }
+    .LoginButton{
+        
+        grid-column: 2;
+        grid-row: 1;
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    button {
+        
+        /* width: 175px;
+        height: 40px;*/
+        border-radius: 10px; 
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        font-size: 4vw;
+        font-family: Anton, sans-serif;
+        color: #1e1e1e;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        border-width: 0;
+        
+    }
+      
+    button:focus {
+        outline: none;
+    }
+    .Title{
+        grid-column: 1;
+        grid-row: 1;
+        /* justify-content: center;
+        align-items: center; */
+        
+        font-size: 16vw;
+        font-family: 'Overlock', cursive;
+        background-color:#1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Anton, sans-serif;
+        color:#9e9ea1;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}
+@media screen and (max-width: 768px) and (min-width:500px)   {
+    /* for tablets */
+    .App1 {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        /* grid-gap: 1px; */
+        height:15vh;
+        background-color: #1e1e1e;
+    
+    }
+    .LoginButton{
+        
+        grid-column: 2;
+        grid-row: 1/1;
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    button {
+        
+        /* width: 175px;
+        height: 40px;*/
+        border-radius: 10px; 
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        font-size: 4vw;
+        font-family: Anton, sans-serif;
+        color: #1e1e1e;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        border-width: 0;
+        
+    }
+      
+    button:focus {
+        outline: none;
+    }
+    .Title{
+        grid-column: 1;
+        grid-row: 1/1;
+        /* justify-content: center;
+        align-items: center; */
+        
+        font-size: 10vw;
+        font-family: 'Overlock', cursive;
+        background-color:#1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Anton, sans-serif;
+        color:#9e9ea1;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}
+@media screen and (min-width: 769px) {
+    /* For desktop: */
+    .App1 {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        /* grid-gap: 1px; */
+        height:15vh;
+        background-color: #1e1e1e;
+    
+    }
+    .LoginButton{
+        
+        grid-column: 3/4;
+        grid-row: 1/1;
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    button {
+        
+        /* width: 175px;
+        height: 40px;*/
+        border-radius: 10px; 
+        border-color: #1e1e1e;
+        background: #1e1e1e;
+        font-size: 4vw;
+        font-family: Anton, sans-serif;
+        color: #1e1e1e;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        border-width: 0;
+        
+    }
+      
+    button:focus {
+        outline: none;
+    }
+    .Title{
+        grid-column: 2/2;
+        grid-row: 1/1;
+        /* justify-content: center;
+        align-items: center; */
+        
+        font-size: 4vw;
+        font-family: 'Overlock', cursive;
+        background-color:#1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Anton, sans-serif;
+        color:#9e9ea1;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}
 
-}
-.LoginButton{
-    
-    grid-column: 3/4;
-    grid-row: 1/1;
-    border-color: #00c2fd;
-    background: #00c2fd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-button {
-    
-    /* width: 175px;
-    height: 40px;*/
-    border-radius: 10px; 
-    border-color: #00c2fd;
-    background: #00c2fd;
-    font-size: 4vw;
-    font-family: 'Overlock', cursive;
-
-    
-}
-  
-button:focus {
-    outline: none;
-}
-.Title{
-    grid-column: 2/2;
-    grid-row: 1/1;
-    /* justify-content: center;
-    align-items: center; */
-    color: #000000;
-    font-size: 4vw;
-    font-family: 'Overlock', cursive;
-    background-color:#00c2fd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

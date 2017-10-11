@@ -1,2 +1,3 @@
 select *
-from chores;
+from chores
+where userId=$1;

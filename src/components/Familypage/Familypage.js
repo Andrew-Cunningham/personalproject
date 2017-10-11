@@ -9,9 +9,9 @@ export default class Familypage extends Component{
         return(
             <div className='App5'>
                 
-                <div className='HomeSidebar1'><div>Sidebar 1</div></div>
-                <div className='HomeSidebar2'><div>Sidebar 2</div></div>
-                <div className='HomeHeader'><div>FamilyPage</div></div>
+                <div className='FamilySidebar1'><div>Sidebar 1</div></div>
+                <div className='FamilySidebar2'><div>Sidebar 2</div></div>
+                <div className='FamilyHomeHeader'><div>FamilyPage</div></div>
             </div>
         )
     }
