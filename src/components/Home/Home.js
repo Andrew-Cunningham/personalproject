@@ -29,10 +29,11 @@ class Home extends Component{
             
         }
         ).then((response)=>{
-        alert('A chore was submitted: ' + this.state.value);
-        this.setState({value:""});})
-        this.props.getChores()
-        }
+            alert('A chore was submitted: ' + this.state.value);
+            this.setState({value:""});
+            this.props.getChores();
+        })
+    }
     
      
     componentDidMount(){

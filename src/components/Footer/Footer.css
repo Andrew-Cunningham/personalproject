@@ -45,7 +45,7 @@ button2:focus {
     /* justify-content: center;
     align-items: center; */
     color: #000000;
-    font-size: 16vw;
+    font-size: 10vw;
     font-family: 'Overlock', cursive;
     background-color:#2c2c2c;
     display: flex;
@@ -152,8 +152,6 @@ button2:focus {
     .Title2{
         grid-column: 2/3;
         grid-row: 1/1;
-        /* justify-content: center;
-        align-items: center; */
         color: #000000;
         font-size: 4vw;
         font-family: 'Overlock', cursive;
@@ -164,4 +162,5 @@ button2:focus {
         color: #9e9ea1;
         font-family: Anton, sans-serif;
     }
+
 }
